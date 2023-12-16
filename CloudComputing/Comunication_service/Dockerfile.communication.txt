@@ -1,0 +1,9 @@
+# Dockerfile.communication
+FROM python:3.8-slim
+
+WORKDIR /app
+COPY communication_service.py .
+
+RUN pip install flask requests
+
+CMD ["python", "communication_service.py"]

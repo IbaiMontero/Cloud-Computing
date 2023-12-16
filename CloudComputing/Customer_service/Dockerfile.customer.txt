@@ -1,0 +1,9 @@
+# Dockerfile.customer
+FROM python:3.8-slim
+
+WORKDIR /app
+COPY customer_service.py .
+
+RUN pip install flask requests
+
+CMD ["python", "customer_service.py"]
